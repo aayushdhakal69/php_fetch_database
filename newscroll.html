@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Scroll</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        list-style: none !important;
+    }
+
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fixedheight {
+        height: 300px;
+        width: 250px;
+        padding: 5px;
+    }
+
+    .content {
+        padding: 10px;
+        text-align: left;
+        height: 300px;
+        overflow: auto;
+        /* background: #fff; */
+        background-color: rgb(14, 11, 52);
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    .inner {
+        display: flex;
+        gap: 18px;
+    }
+
+    ul li {
+        padding: 10px;
+    }
+
+    .a h4 {
+        position: sticky;
+        top: 0;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <h1>This is scroll box</h1>
+        <div class="fixedheight">
+            <div class="content">
+                <div class="inner">
+                    <div class="a">
+                        <h4>A</h4>
+                    </div>
+                    <div class="a_ul">
+                        <ul>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="a">
+                        <h4>B</h4>
+                    </div>
+                    <div class="a_ul">
+                        <ul>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="a">
+                        <h4>C</h4>
+                    </div>
+                    <div class="a_ul">
+                        <ul>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inner">
+                    <div class="a">
+                        <h4>D</h4>
+                    </div>
+                    <div class="a_ul">
+                        <ul>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                            <li>Aayush</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
