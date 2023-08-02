@@ -49,7 +49,8 @@
         if (mysqli_num_rows($result) > 0) {
             if ($password == $row["pass"]) {
                 $_SESSION["login"] = true;
-                $_SESSION["uname"] = $row["uname"];
+                // $_SESSION["uname"] = $row["uname"];
+                $_SESSION["uname"] = $username;
                 // echo "Hello $username";
                 header("Location: cover.php");
             }

@@ -64,9 +64,11 @@
             // Insert the user data into the database
             $sql = "INSERT INTO idandpass2 (uname, pass) VALUES ('$username', '$password')";
             $result = $db->query($sql); //true or false
-
+    
             if ($result) {
-                echo "You have been registered successfully.";
+                echo
+                    "<script> alert('Successfully Registered');</script>";
+                header("Location: cover.php");
             } else {
                 echo "There was an error registering you.";
             }
