@@ -17,6 +17,20 @@
         border-radius: 5px;
         font-weight: bold;
     }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    button{
+        margin-top: 2rem;
+        cursor: pointer;
+        border: none;
+        padding: 12px;
+        background-color: red;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+    }
 </style>
 
 <body>
@@ -38,6 +52,8 @@
         <br><br>
         <input type="submit" name="submit" id="submit">
     </form>
+
+    <button><a href="cover.php">Home</a></button>
     <br><br>
     <?php
     session_start();
@@ -51,21 +67,21 @@
         $username = $_POST["uname"];
         $password = $_POST["pass"];
         $password_confirm = $_POST["password_confirm"];
-        $dupilicate = mysqli_query($db, "SELECT * FROM idandpass2 WHERE uname = '$username' OR pass = '$password' ");
+        $result = mysqli_query($db, "SELECT * FROM idandpass2 WHERE uname = '$username' AND pass = '$password' ");
 
         // Check if the passwords match
         if ($password != $password_confirm) {
             echo "Passwords do not match.";
-        } else if (mysqli_num_rows($dupilicate) > 0) {
+        } else if (mysqli_num_rows($result) > 0) {
             echo
                 "<script> alert('Username is already taken');</script>";
         } else {
 
             // Insert the user data into the database
             $sql = "INSERT INTO idandpass2 (uname, pass) VALUES ('$username', '$password')";
-            $result = $db->query($sql); //true or false
+            $result1 = $db->query($sql); //true or false
     
-            if ($result) {
+            if ($result1) {
                 echo
                     "<script> alert('Successfully Registered');</script>";
                 header("Location: cover.php");
@@ -75,7 +91,6 @@
         }
     }
     ?>
-
 </body>
 
 </html>

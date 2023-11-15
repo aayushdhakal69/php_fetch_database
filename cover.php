@@ -72,10 +72,10 @@
         $db = new mysqli("localhost", "root", "", "login_database");
 
         if (!empty($_SESSION["uname"])) {
-            $uname = $_SESSION["uname"];
+            $uname = $_SESSION["uname"]; //safety
             // $pass = $_SESSION["pass"];
             $result = mysqli_query($db, "SELECT * FROM idandpass2 WHERE uname = '$uname' ");
-            $row = mysqli_fetch_assoc($result);
+            // $row = mysqli_fetch_assoc($result); //true //false
             echo "<h1>Welcome! $uname You are logged in</h1>";
         } else {
             // header("Location: login.php");
